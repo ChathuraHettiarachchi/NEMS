@@ -22,4 +22,8 @@
     <color name="side_nav_bar_back_color">#282F35</color>
     <color name="color_blue">#126BFB</color>
     <color name="color_blue_dark">#0c48a9</color>
+
+    <color name="charge_color">#0EAA97</color>
+    <color name="charge_color_dark">#158982</color>
+    <color name="charge_background">#E3E3E6</color>
 </resources>

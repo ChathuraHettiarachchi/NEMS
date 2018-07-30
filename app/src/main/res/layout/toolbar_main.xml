@@ -2,7 +2,7 @@
 <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:minHeight="?attr/actionBarSize"
-    android:background="?attr/colorPrimary"
+    android:background="@color/pure_white"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
     app:contentInsetLeft="0dp"
@@ -15,7 +15,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_info_white_24dp"
+            android:src="@drawable/ic_info_grey_700_24dp"
             android:layout_alignParentRight="true"
             android:layout_margin="16dp"
             android:layout_centerHorizontal="true"/>
@@ -23,7 +23,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/your_logo_here_white"
+            android:src="@drawable/your_logo_here_gray"
             android:layout_alignParentRight="true"
             android:layout_margin="8dp"
             android:layout_centerHorizontal="true"/>
