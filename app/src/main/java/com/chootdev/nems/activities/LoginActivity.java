@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity implements ForgotPasswordDi
 
     @OnClick(R.id.btnLogin)
     public void onBtnLoginClicked() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, NavigationActivity.class);
         startActivity(intent);
         finish();
     }
