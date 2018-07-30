@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layItemsBottom"
+        android:background="@color/color_blue">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/your_logo_here_white"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layItemsBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:layout_alignParentBottom="true"
+        android:focusableInTouchMode="true">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:focusableInTouchMode="true">
+
+            <EditText
+                android:id="@+id/input_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:maxLines="1"
+                android:fontFamily="@font/opensan_regular"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true">
+
+            <EditText
+                android:id="@+id/input_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Password"
+                android:maxLines="1"
+                android:fontFamily="@font/opensan_regular"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/drawable_button_blue"
+            android:layout_marginTop="16dp"
+            android:stateListAnimator="@null"
+            android:text="Login"
+            android:textColor="@color/pure_white"
+            android:fontFamily="@font/opensan_regular"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="or"
+            android:layout_margin="8dp"
+            android:fontFamily="@font/opensan_regular"/>
+
+        <TextView
+            android:id="@+id/txtForgotPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Forgot your password"
+            android:textColor="@color/color_blue_dark"
+            android:fontFamily="@font/opensan_regular"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

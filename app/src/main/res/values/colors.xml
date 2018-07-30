@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#303F9F</color>
+
+    <color name="pure_white">#FFFFFF</color>
+    <color name="white">#FFF</color>
+    <color name="pure_white_80">#33ffffff</color>
+    <color name="pure_white_50">#80ffffff</color>
+    <color name="disable_text">#E2E2E2</color>
+    <color name="multi_line_text">#ededed</color>
+    <color name="attach_box_color">#FFE9E9E9</color>
+
+    <color name="pure_black">#000</color>
+    <color name="pure_black_90">#1A000000</color>
+    <color name="pure_black_80">#33000000</color>
+    <color name="pure_black_70">#4D000000</color>
+    <color name="pure_black_50">#80000000</color>
+    <color name="pure_black_40">#66000000</color>
+
+    <color name="side_nav_bar_back_color">#282F35</color>
+    <color name="color_blue">#126BFB</color>
+    <color name="color_blue_dark">#0c48a9</color>
+</resources>
