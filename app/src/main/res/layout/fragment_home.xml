@@ -49,7 +49,7 @@
                     android:layout_height="40dp"
                     android:background="@drawable/rounded_white"
                     android:stateListAnimator="@null"
-                    android:text="From: 2018-12-12"
+                    android:text="From: 12-12-2001"
                     android:fontFamily="@font/opensan_regular"/>
 
                 <Button
@@ -58,7 +58,7 @@
                     android:layout_height="40dp"
                     android:background="@drawable/rounded_white"
                     android:stateListAnimator="@null"
-                    android:text="To: 2019-12-12"
+                    android:text="To: 21-12-2008"
                     android:fontFamily="@font/opensan_regular"
                     android:layout_marginTop="10dp"/>
 
