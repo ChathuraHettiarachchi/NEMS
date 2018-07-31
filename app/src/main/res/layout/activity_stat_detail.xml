@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.StatDetailActivity">
+
+    <include
+        layout="@layout/toolbar_with_back_and_name"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                card_view:cardCornerRadius="5dp"
+                android:layout_weight="1"
+                android:layout_marginRight="2.5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txtTodayTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Today"
+                        android:fontFamily="@font/opensans_bold"
+                        android:textSize="14dp"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/pure_black"/>
+
+                    <TextView
+                        android:id="@+id/tvToday"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="222 W"
+                        android:layout_below="@+id/txtTodayTop"
+                        android:fontFamily="@font/opensan_regular"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:autoSizeMaxTextSize="24sp"
+                        android:autoSizeMinTextSize="14sp"
+                        android:autoSizeTextType="uniform"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                card_view:cardCornerRadius="5dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="2.5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvWeekTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Week"
+                        android:fontFamily="@font/opensans_bold"
+                        android:textSize="14dp"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/pure_black"/>
+
+                    <TextView
+                        android:id="@+id/tvWeek"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="222 W"
+                        android:layout_below="@+id/tvWeekTop"
+                        android:fontFamily="@font/opensan_regular"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:autoSizeMaxTextSize="24sp"
+                        android:autoSizeMinTextSize="14sp"
+                        android:autoSizeTextType="uniform"/>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                card_view:cardCornerRadius="5dp"
+                android:layout_weight="1"
+                android:layout_marginRight="2.5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvMonthTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Month"
+                        android:fontFamily="@font/opensans_bold"
+                        android:textSize="14dp"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/pure_black"/>
+
+                    <TextView
+                        android:id="@+id/tvMonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="222 W"
+                        android:layout_below="@+id/tvMonthTop"
+                        android:fontFamily="@font/opensan_regular"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:autoSizeMaxTextSize="24sp"
+                        android:autoSizeMinTextSize="14sp"
+                        android:autoSizeTextType="uniform"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                card_view:cardCornerRadius="5dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="2.5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvYearTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Year"
+                        android:fontFamily="@font/opensans_bold"
+                        android:textSize="14dp"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/pure_black"/>
+
+                    <TextView
+                        android:id="@+id/tvYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="222 W"
+                        android:layout_below="@+id/tvYearTop"
+                        android:fontFamily="@font/opensan_regular"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:autoSizeMaxTextSize="24sp"
+                        android:autoSizeMinTextSize="14sp"
+                        android:autoSizeTextType="uniform"/>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

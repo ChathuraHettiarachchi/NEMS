@@ -1,5 +1,6 @@
 package com.chootdev.nems.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -10,22 +11,26 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.chootdev.nems.R;
+import com.chootdev.nems.activities.StatDetailActivity;
 import com.chootdev.nems.adapters.StatsAdapter;
+import com.chootdev.nems.alerts.AddApplianceDialog;
 import com.chootdev.nems.database.DatabaseManager;
 import com.chootdev.nems.models.StatModel;
 import com.chootdev.nems.repo.StatsRepo;
+import com.chootdev.recycleclick.RecycleClick;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.Unbinder;
 
 /**
  * Created by Choota.
  */
 
-public class StatsFragment extends Fragment {
+public class StatsFragment extends Fragment implements AddApplianceDialog.AddApplianceDialogCallback {
 
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
@@ -63,10 +68,9 @@ public class StatsFragment extends Fragment {
 
     private void addDataToDatabase() {
         //statsRepo.create(new StatModel(1,"Lights","Lights", "1000","122"));
-        statsRepo.create(new StatModel(2, "Lights", "Lights 1", "1000", "122"));
-        statsRepo.create(new StatModel(2, "Lights", "Lights 2", "1000", "122"));
-        statsRepo.create(new StatModel(2, "Lights", "Lights 3", "1000", "122"));
-        statsRepo.create(new StatModel(2, "Lights", "Lights 4", "1000", "122"));
+        statsRepo.create(new StatModel(2, "Light", "Lights 1", "1000", "122"));
+        statsRepo.create(new StatModel(2, "Light", "Lights 2", "1000", "122"));
+        statsRepo.create(new StatModel(2, "Light", "Lights 3", "1000", "122"));
 
         //statsRepo.create(new StatModel(1,"Fan","Fan", "1000","122"));
         statsRepo.create(new StatModel(2, "Fan", "Fan 1", "1000", "122"));
@@ -84,17 +88,35 @@ public class StatsFragment extends Fragment {
         statsRepo.create(new StatModel(2, "Television", "Television 2", "1000", "122"));
     }
 
-    private void populateScreen(){
+    private void populateScreen() {
 
         List<StatModel> dataSet = (List<StatModel>) statsRepo.findAll();
 
         StatsAdapter adapter = new StatsAdapter(getActivity(), dataSet);
         recyclerView.setAdapter(adapter);
+
+        RecycleClick.addTo(recyclerView).setOnItemClickListener(new RecycleClick.OnItemClickListener() {
+            @Override
+            public void onItemClicked(RecyclerView recyclerView, int position, View v) {
+                startActivity(new Intent(getActivity(), StatDetailActivity.class));
+            }
+        });
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
+    }
+
+    @OnClick(R.id.fab)
+    public void onViewClicked() {
+        new AddApplianceDialog(getActivity(), this).show();
+    }
+
+    @Override
+    public void onAddApplianceCalled(String name, String type) {
+        statsRepo.create(new StatModel(2, type, name, "0", "0"));
+        populateScreen();
     }
 }

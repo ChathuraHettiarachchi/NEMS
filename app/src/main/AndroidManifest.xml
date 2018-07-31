@@ -31,7 +31,11 @@
             android:name=".activities.NavigationActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeNoActionBar" />
-        <activity android:name=".activities.AboutUsAndHelpActivity"
+        <activity
+            android:name=".activities.AboutUsAndHelpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity android:name=".activities.StatDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeNoActionBar" />
     </application>

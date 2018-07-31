@@ -40,6 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Username"
+                android:textSize="14sp"
                 android:maxLines="1"
                 android:fontFamily="@font/opensan_regular"/>
 
@@ -57,6 +58,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:hint="Password"
+                android:textSize="14sp"
                 android:maxLines="1"
                 android:fontFamily="@font/opensan_regular"/>
 

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/rounded_white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add new appliance"
+        android:textColor="@color/pure_black"
+        android:fontFamily="@font/opensans_bold"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please add device name and type to make monitoring data."
+        android:fontFamily="@font/opensan_regular"
+        android:textSize="14dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:focusableInTouchMode="true">
+
+        <EditText
+            android:id="@+id/inputName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Appliance name"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:fontFamily="@font/opensan_regular"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Appliance type"
+        android:textColor="@color/pure_black"
+        android:fontFamily="@font/opensan_regular"
+        android:textSize="14dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioSet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp">
+
+        <RadioButton
+            android:id="@+id/radioLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Light"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioFan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fan" />
+
+        <RadioButton
+            android:id="@+id/radioHeater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Heater" />
+
+        <RadioButton
+            android:id="@+id/radioTelevision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Television" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/drawable_button_blue"
+        android:layout_marginTop="8dp"
+        android:stateListAnimator="@null"
+        android:text="Add Appliance"
+        android:textColor="@color/pure_white"
+        android:fontFamily="@font/opensan_regular"/>
+
+</LinearLayout>

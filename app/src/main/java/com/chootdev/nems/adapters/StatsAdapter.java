@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.chootdev.nems.R;
@@ -42,7 +44,7 @@ public class StatsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
         for (StatModel item : items) {
 
-            if (item.itemType.equals("Lights")) {
+            if (item.itemType.equals("Light")) {
                 generatedListLights.add(item);
             } else if (item.itemType.equals("Fan")) {
                 generatedListFans.add(item);
@@ -54,19 +56,19 @@ public class StatsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         }
 
         if (generatedListLights.size() > 0) {
-            generatedList.add(new StatModel(1,"Lights","Lights", "1000","122"));
+            generatedList.add(new StatModel(1, "Lights", "Lights", "1000", "122"));
             generatedList.addAll(generatedListLights);
         }
         if (generatedListFans.size() > 0) {
-            generatedList.add(new StatModel(1,"Fan","Fan", "1000","122"));
+            generatedList.add(new StatModel(1, "Fan", "Fan", "1000", "122"));
             generatedList.addAll(generatedListFans);
         }
         if (generatedListHeaters.size() > 0) {
-            generatedList.add(new StatModel(1,"Heater","Heater", "1000","122"));
+            generatedList.add(new StatModel(1, "Heater", "Heater", "1000", "122"));
             generatedList.addAll(generatedListHeaters);
         }
         if (generatedListTelevisions.size() > 0) {
-            generatedList.add(new StatModel(1,"Television","Television", "1000","122"));
+            generatedList.add(new StatModel(1, "Television", "Television", "1000", "122"));
             generatedList.addAll(generatedListTelevisions);
         }
 
@@ -130,15 +132,32 @@ public class StatsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
     private void configType(int position, StatTypeHolder holder) {
         StatModel model = items.get(position);
+
         holder.tvType.setText(model.name);
+        holder.layBack.setBackgroundColor(getColor(model));
     }
 
     private void configItem(int position, StatItemHolder holder) {
         StatModel model = items.get(position);
 
         holder.tvName.setText(model.name);
-        holder.tvCurrent.setText("Current: "+model.current+" W");
-        holder.tvTotal.setText("Total: "+model.total+" W");
+        holder.tvCurrent.setText("Current: " + model.current + " W");
+        holder.tvTotal.setText("Total: " + model.total + " W");
+        holder.laySide.setBackgroundColor(getColor(model));
+    }
+
+    private int getColor(StatModel model) {
+        if (model.itemType.equals("Light") || model.itemType.equals("Lights")) {
+            return context.getResources().getColor(R.color.color_lights);
+        } else if (model.itemType.equals("Fan")) {
+            return context.getResources().getColor(R.color.color_fan);
+        } else if (model.itemType.equals("Heater")) {
+            return context.getResources().getColor(R.color.color_heater);
+        } else if (model.itemType.equals("Television")) {
+            return context.getResources().getColor(R.color.color_television);
+        } else {
+            return context.getResources().getColor(R.color.charge_background);
+        }
     }
 
     public class StatTypeHolder extends RecyclerView.ViewHolder {
@@ -147,6 +166,8 @@ public class StatsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         ImageView imgIcon;
         @BindView(R.id.tvType)
         TextView tvType;
+        @BindView(R.id.layBack)
+        RelativeLayout layBack;
 
 
         public StatTypeHolder(View itemView) {
@@ -163,6 +184,8 @@ public class StatsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         TextView tvCurrent;
         @BindView(R.id.tvTotal)
         TextView tvTotal;
+        @BindView(R.id.laySide)
+        LinearLayout laySide;
 
         public StatItemHolder(View itemView) {
             super(itemView);
